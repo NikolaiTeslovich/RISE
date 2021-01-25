@@ -1,5 +1,5 @@
 # Import packages
-import time
+from time import sleep
 import board
 import busio
 import adafruit_lsm303_accel
