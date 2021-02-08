@@ -4,4 +4,4 @@ from picamera import PiCamera
 camera = PiCamera()
 
 # take image
-camera.capture("~/RISE/testimage2.jpg")
+camera.capture("testimage2.jpg")
