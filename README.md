@@ -13,3 +13,5 @@ Very much still *in progress*.
   - the spycam is the same as the picamera v1
 - make script start on startup
 - stop collecting data on landing, when the pressure data is no longer changing
+- Should we truncate the data after a certain point to decrease file size? Like the hundreds or thousands place
+  - Looking at the csv file, it seems that the digits repeat themselves, that there are only so many distinct messages. 
