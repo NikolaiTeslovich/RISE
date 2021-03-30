@@ -8,7 +8,7 @@ Very much still *in progress*.
 
 ## Don't do this
 
-![ShortedPowerBoost](/resources/ShortedPowerBoost.png)
+![ShortedPowerBoost](/resources/ShortedPowerBoost.jpeg)
 
 ## To do
 
