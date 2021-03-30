@@ -10,6 +10,7 @@ Very much still *in progress*.
 ## To do
 
 ### UPDATE Fusion 360 FILES!
+### Orient the STLs correctly!
 
 - find appropriate camera resolution and framerate, [here's a helpful article](https://picamera.readthedocs.io/en/release-1.10/fov.html)
   - the spycam is the same as the picamera v1
