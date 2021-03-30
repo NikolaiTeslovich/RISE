@@ -12,6 +12,7 @@ Very much still *in progress*.
 ### UPDATE Fusion 360 FILES!
 ### Orient the STLs correctly!
 ### M2 or M2.5?? How can I be sure?
+#### I got mine from an old hard drive lol
 
 - find appropriate camera resolution and framerate, [here's a helpful article](https://picamera.readthedocs.io/en/release-1.10/fov.html)
   - the spycam is the same as the picamera v1
