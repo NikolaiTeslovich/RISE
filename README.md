@@ -1,6 +1,6 @@
 # RISE
 
-Everything related to the Penn State Rocket Lab Initiative **(mostly python)**.
+Everything related to the *Penn State Rocket Lab Initiative*.
 
 Currently working on writing a program and designing a model rocket on which I will launch a Raspberry Pi Zero W with an array of sensors.
 
