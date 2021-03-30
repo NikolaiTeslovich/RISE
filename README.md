@@ -6,6 +6,9 @@ Currently working on writing a program and designing a model rocket on which I w
 
 Very much still *in progress*.
 
+## Don't do this
+
+![ShortedPowerBoost](/resources/ShortedPowerBoost.png)
 
 ## To do
 
