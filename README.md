@@ -40,6 +40,8 @@ Just made of what I had lying around at the time. Feel free to change the hole s
 ### Things to keep in mind
 The screws tap into the plastic, so **do not** over-tighten them. Other than that, assembly should be pretty self-explanatory.
 
-Also, make sure that the battery polarity matches the polarity of the PowerBoost 500C JST connector. The one on the GNB 450mah 1s is reversed. Or else, this will happen *magic smoke will come out*.
+Also, make sure that the battery polarity matches the polarity of the PowerBoost 500C JST connector. The one on the GNB 450mah 1s is reversed. Or else, this will happen.
+
+  > *magic smoke will come out*.
 
 ![ShortedPowerBoost](/resources/ShortedPowerBoost.jpeg)
