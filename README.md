@@ -26,7 +26,7 @@ Very much still *in progress*.
 
 ### Parts required
 Just made of what I had lying around at the time. Feel free to change the hole sizes to fit your screw sizes through the included Fusion 360 files. Fusion 360 is free.
-- **Electronics**
+
 - 1x Raspberry Pi Zero W
 - 1x PowerBoost 500C
 - 1x LSM303DLHC
