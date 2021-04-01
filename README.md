@@ -17,7 +17,7 @@ Very much still *in progress*.
 - Should we truncate the data after a certain point to decrease file size? Like the hundreds or thousands place
   - Looking at the csv file, it seems that the digits repeat themselves, that there are only so many distinct messages
 
-## Assembly instructions
+## Sensor payload & camera assembly instructions
 
 ### 3D Printing instructions
 - STLs and Fusion 360 files located in the [files](/files) directory.
@@ -25,7 +25,7 @@ Very much still *in progress*.
 - Everything else was printed out of PLA at 215°C and 15% infill
 
 ### Parts required
-Just made of what I had lying around at the time. Feel free to change the hole sizes to fit your screw sizes through the included Fusion 360 files.
+Just made of what I had lying around at the time. Feel free to change the hole sizes to fit your screw sizes through the included Fusion 360 files. Fusion 360 is free.
 - **Electronics**
   - 1x Raspberry Pi Zero W
   - 1x PowerBoost 500C
