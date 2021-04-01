@@ -1,20 +1,14 @@
 # RISE
 
-Everything related to the *Penn State Rocket Lab Initiative*.
+Everything related to the *The Rocket Lab Initiative (RISE)*.
 
-Currently working on writing a program and designing a model rocket on which I will launch a Raspberry Pi Zero W with an array of sensors.
+Currently working on writing a program and designing a model rocket on which I will launch a Raspberry Pi Zero W with an array of sensors, which I've already designed.
 
 Very much still *in progress*.
-
-## Don't do this
-
-![ShortedPowerBoost](/resources/ShortedPowerBoost.jpeg)
 
 ## To do
 
 ### Orient the STLs correctly!
-### M2.5 definitively!
-#### I got mine from an old hard drive lol
 
 - find appropriate camera resolution and framerate, [here's a helpful article](https://picamera.readthedocs.io/en/release-1.10/fov.html)
   - the spycam is the same as the picamera v1
@@ -26,12 +20,13 @@ Very much still *in progress*.
 ## Assembly instructions
 
 ### 3D Printing instructions
+- STLs and Fusion 360 files located in the [files](/files) directory.
 - Spacers were printed out of TPU
 - Everything else was printed out of PLA at 215°C and 15% infill
 
 ### Parts required
 Just made of what I had lying around at the time. Feel free to change the hole sizes to fit your screw sizes through the included Fusion 360 files.
-- **electronics**
+- **Electronics**
   - 1x Raspberry Pi Zero W
   - 1x PowerBoost 500C
   - 1x LSM303DLHC
@@ -44,3 +39,7 @@ Just made of what I had lying around at the time. Feel free to change the hole s
 
 ### Things to keep in mind
 The screws tap into the plastic, so **do not** over-tighten them. Other than that, assembly should be pretty self-explanatory.
+
+Also, make sure that the battery polarity matches the polarity of the PowerBoost 500C JST connector. The one on the GNB 450mah 1s is reversed. Or else, this will happen.
+
+![ShortedPowerBoost](/resources/ShortedPowerBoost.jpeg)
