@@ -23,6 +23,7 @@ Very much still *in progress*.
 - STLs and Fusion 360 files located in the [files](/files) directory.
 - Spacers were printed out of TPU
 - Everything else was printed out of PLA at 215°C and 15% infill
+  - Supports are only needed for the [SensorSkeleton](/files/SensorSkeleton.stl)
 
 ### Parts required
 Just made of what I had lying around at the time. Feel free to change the hole sizes to fit your screw sizes through the included Fusion 360 files. Fusion 360 is free.
