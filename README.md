@@ -12,7 +12,6 @@ Very much still *in progress*.
 
 ## To do
 
-### UPDATE Fusion 360 FILES!
 ### Orient the STLs correctly!
 ### M2.5 definitively!
 #### I got mine from an old hard drive lol
