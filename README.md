@@ -31,12 +31,16 @@ Very much still *in progress*.
 
 ### Parts required
 Just made of what I had lying around at the time. Feel free to change the hole sizes to fit your screw sizes through the included Fusion 360 files.
-
-- [GNB 450mah 1s LiHV](https://www.amazon.com/PowerWhoop-Connector-Tinyhawk-Brushless-Inductrix/dp/B078Y3Y4ZZ/ref=sr_1_9?dchild=1&keywords=450mah+1s&qid=1617315333&sr=8-9), it's what I use in my super small FPV drones
-- 10x 5mm M2.5 screws
+- **electronics**
+  - 1x Raspberry Pi Zero W
+  - 1x PowerBoost 500C
+  - 1x LSM303DLHC
+  - 1x BMP338
+  - 1x [GNB 450mah 1s LiHV](https://www.amazon.com/PowerWhoop-Connector-Tinyhawk-Brushless-Inductrix/dp/B078Y3Y4ZZ/ref=sr_1_9?dchild=1&keywords=450mah+1s&qid=1617315333&sr=8-9) - it's what I use in my super small FPV drones
+- 10x 5mm M2.5 screws - from some old computer hard-drives
 - 1x 10mm M3 screw
 - 1x small rubber band
-- Printed parts (obviously)
+- 1x printed parts (obviously)
 
 ### Things to keep in mind
 The screws tap into the plastic, so **do not** over-tighten them. Other than that, assembly should be pretty self-explanatory.
