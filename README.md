@@ -27,7 +27,14 @@ Very much still *in progress*.
 
 ### Parts required
 
-- 12X 5mm M2 screws
+Just made of what I had lying around at the time. Feel free to change the hole sizes to fit your screw through the included Fusion 360 files.
+
+- 10x 5mm M2.5 screws
+- 1x 10mm M3 screw
+- 1x small rubber band
 - Printed parts
-  - The sensor spacers were printed out of TPU
-  - SkeletalFairing was made out of PLA at 215C
+  - Spacers were printed out of TPU
+  - Rest was printed out of PLA at 215°C and 15% infill
+
+### Things to keep in mind
+The screws tap into the plastic, so **do not** over-tighten them.
