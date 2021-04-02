@@ -19,6 +19,8 @@ Very much still *in progress*.
 
 ## Sensor payload & camera assembly
 
+![SensorPayload](/resources/SensorPayload.jpeg)
+
 ### 3D printing
 - STLs and Fusion 360 files located in the [files](/files) directory.
 - Spacers were printed out of TPU
