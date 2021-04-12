@@ -1,5 +1,5 @@
 <h1 align="center">
-  The Rocket Lab Initiative—RISE
+  The Rocket Lab Initiative — RISE
 </h1>
 
 <p align="center">
