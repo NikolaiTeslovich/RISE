@@ -1,6 +1,12 @@
-# RISE
+<h1 align="center">
+  The Rocket Lab Initiative — RISE
+</h1>
 
-Everything related to the *The Rocket Lab Initiative (RISE)*.
+<p align="center">
+  <a href="https://github.com/NikolaiTeslovich/RISE/blob/main/LICENSE">
+    <img alt="MIT license" src="https://img.shields.io/github/license/NikolaiTeslovich/RISE">
+  </a>
+</p>
 
 Currently working on writing a program and designing a model rocket on which I will launch a Raspberry Pi Zero W with an array of sensors, which I've already designed.
 
