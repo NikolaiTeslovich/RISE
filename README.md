@@ -16,6 +16,8 @@
 
 ### Orient the STLs correctly!
 
+### Straighten out my nose cone, it's kinda crooked for some reason
+
 - find appropriate camera resolution and framerate, [here's a helpful article](https://picamera.readthedocs.io/en/release-1.10/fov.html)
   - the spycam is the same as the picamera v1
 - make script start on startup
