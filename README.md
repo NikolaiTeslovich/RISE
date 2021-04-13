@@ -41,6 +41,8 @@ Last but not least, here is the external camera:
 
 ## Sensor payload & camera assembly
 
+Here is the end result of the brief tutorial below. 
+
 ![SensorPayload](/resources/SensorPayload.jpeg)
 
 ### 3D printing
