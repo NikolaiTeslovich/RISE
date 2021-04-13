@@ -25,6 +25,20 @@
 - Should we truncate the data after a certain point to decrease file size? Like the hundreds or thousands place
   - Looking at the csv file, it seems that the digits repeat themselves, that there are only so many distinct messages
 
+## Some beautiful photographs
+
+Here is the rocket itself:
+
+![Rocket](/resources/rocket.jpeg)
+
+Here is the payload securely packed inside the rocket:
+
+![Payload inside rocket](/resources/payloadinrocket.jpeg)
+
+Last but not least, here is the external camera:
+
+[Camera mounted externally](/resources/camera.jpeg)
+
 ## Sensor payload & camera assembly
 
 ![SensorPayload](/resources/SensorPayload.jpeg)
