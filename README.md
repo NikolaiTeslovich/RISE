@@ -37,7 +37,7 @@ Here is the payload securely packed inside the rocket:
 
 Last but not least, here is the external camera:
 
-[Camera mounted externally](/resources/camera.jpeg)
+![Camera mounted externally](/resources/camera.jpeg)
 
 ## Sensor payload & camera assembly
 
