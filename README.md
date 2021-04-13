@@ -27,7 +27,7 @@
 
 # Sensor payload & camera assembly
 
-Here is the end result of the brief tutorial below:
+Here is the end result of the brief tutorial below (ideally it would be soldered):
 
 ![SensorPayload](/resources/SensorPayload.jpeg)
 
