@@ -34,7 +34,7 @@ This is by far not the easiest thing to assemble, so if you are not confident in
 
 Here is the end result of the brief tutorial below:
 
-<p align="middle">
+<p float="left">
   <img src="/resources/payload1.jpg" width="50%" />
   <img src="/resources/payload2.jpg" width="50%" />
 </p>
