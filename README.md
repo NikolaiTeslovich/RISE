@@ -33,7 +33,8 @@ This is by far not the easiest thing to assemble, so if you are not confident in
 # Sensor payload & camera assembly
 
 | ![SensorPayload Side 1](/resources/payload1.jpg) | ![SensorPayload Side 2](/resources/payload2.jpg) |
-| --- | --- |
+| :---: | :---: |
+|  Camera, sensor & voltage regulator  |  Raspberry Pi Zero W  |
 
 ## 3D printing
 
