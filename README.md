@@ -23,7 +23,7 @@ The -r option is used to copy a directory, while the -p option is used to preser
 Here's the general syntax:
 
 ```
-scp remote_username@ip:/directory /local/directory
+scp -r -p remote_username@ip:/datadirectory /local/directory
 ```
 
 So for my use case, it would look like this (ip address omitted for obvious reasons):
