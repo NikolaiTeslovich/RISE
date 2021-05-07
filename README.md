@@ -16,14 +16,14 @@
 
 This is by far not the easiest thing to assemble, so if you are not confident in you tweezer usage skills when ribbon cables are involved, I recommend cutting out a hole in the rocket and mounting the camera facing sideways rather than down.
 
-# Transferring files from the Pi to your computer with SCP (secure copy)
+# Transferring files from the Pi to your computer with SCP
 
 The -r option is used to copy a directory, while the -p option is used to preserve file modification and access times.
 
 Here's the general syntax:
 
 ```
-scp -r -p remote_username@ip:/datadirectory /local/directory
+scp -r -p remote_username@ip:/data_directory /local/directory
 ```
 
 So for my use case, it would look like this (ip address omitted for obvious reasons):
