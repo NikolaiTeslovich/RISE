@@ -52,11 +52,15 @@ The secure copy command connects to the pi and copies the directory at `/home/pi
 
 *Warning: these are like a 2,000 piece LEGO kit, very detailed and lengthy, but hopefully easy to understand*
 
-## Setting up the headless Pi
+## Making the Pi headless
 
 *And I didn't just chop off its head*
 
-Headless means that no connections to the pi other than power and the network are needed to use it, essentially like a server. 
+Headless means that no connections to the Pi other than power and the network are needed to use it, essentially like a server.
+
+### Install the Raspberry Pi imager
+
+https://www.raspberrypi.org/software/
 
 ## Sensor payload & camera assembly
 
