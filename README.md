@@ -34,8 +34,8 @@ This is by far not the easiest thing to assemble, so if you are not confident in
 
 Here is the end result of the brief tutorial below:
 
-| --- | --- |
 | ![SensorPayload Side 1](/resources/payload1.jpg) | ![SensorPayload Side 2](/resources/payload2.jpg) |
+| --- | --- |
 
 ## 3D printing
 - STLs and Fusion 360 files located in the [files](/files) directory.
