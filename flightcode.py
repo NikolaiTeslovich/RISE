@@ -67,16 +67,15 @@ while time.time() - start_time < delay_time + record_time:
     i += 1
     
     if (i % itersperfile) == 0: 
-        df.to_csv(f'data{int(i / itersperfile)}.csv', index = False)
-
-# if the program managed to run successfully, remove the iteration files
-# got rid of because do not want to jepordaze the risk of loosing data
-# for file_name in os.listdir('.'):
-    # if file_name.endswith('.csv'):
-        # os.remove(file_name)
+        df.to_csv(f'data_temporary_{int(i / itersperfile)}.csv', index = False)
 
 # save all the data in one file, if the program ran successfully
-df.to_csv('data_final.csv', index = False)
+df.to_csv('data.csv', index = False)
+
+# if the program managed to run successfully, remove the temporary files
+for file_name in os.listdir('.'):
+    if file_name.startswith('data_temporary') and file_name.endswith('.csv'):
+        os.remove(file_name)
 
 # Stop camera recording
 #cam.stop_recording()
