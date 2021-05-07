@@ -38,7 +38,7 @@ record_time = 20
 
 # iteration
 i = 0
-itersperfile = 10
+temporaryfile_data = 10
 
 # FOR TESTING
 print('Start')
@@ -62,12 +62,12 @@ while time.time() - start_time < delay_time + record_time:
 	            'mag_y':mag.magnetic[1],
 		    'mag_z':mag.magnetic[2]},
 		    ignore_index=True)
-    
+
     # start the counter
     i += 1
-    
-    if (i % itersperfile) == 0:
-        df.to_csv(f'/home/pi/RISE/data/data_temporary_{int(i / itersperfile)}.csv', index = False)
+
+    if (i % temporaryfile_data) == 0:
+        df.to_csv(f'/home/pi/RISE/data/data_temporary_{int(i / temporaryfile_data)}.csv', index = False)
         # for testing purposes
         print('data saved!')
 
