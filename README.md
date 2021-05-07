@@ -35,14 +35,8 @@ This is by far not the easiest thing to assemble, so if you are not confident in
 Here is the end result of the brief tutorial below:
 
 <p align="middle">
-  <figure>
-    <img src="/resources/payload1.jpg" width="49%" />
-    <figcaption>side 1</figcaption>
-  </figure>
-  <figure>
-    <img src="/resources/payload2.jpg" width="49%" />
-    <figcaption>side 2</figcaption>
-  </figure>
+  <img src="/resources/payload1.jpg" width="50%" />
+  <img src="/resources/payload2.jpg" width="50%" />
 </p>
 
 ## 3D printing
