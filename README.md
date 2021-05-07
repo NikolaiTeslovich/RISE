@@ -32,6 +32,8 @@ So for my use case, it would look like this (ip address omitted for obvious reas
 scp -r -p pi@192.xxx.xxx.xxx:/home/pi/RISE/data/ ~/Downloads
 ```
 
+The secure copy command connects to the pi and copies the directory at `/home/pi/RISE/data/` to my computer's user Download directory `~/Downloads`.
+
 # To do
 
 ## Orient the STLs correctly!
