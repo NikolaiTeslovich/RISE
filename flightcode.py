@@ -9,9 +9,9 @@ import time
 import picamera
 
 #Delete the csvs if they already exist#
-for file_name in os.listdir('.'):
+for file_name in os.listdir('/home/pi/RISE/data'):
     if file_name.endswith('.csv'):
-        os.remove(file_name)
+        os.remove(f'/home/pi/RISE/data/{file_name}')
 
 ##### set up I2C and sensors #####
 i2c = busio.I2C(board.SCL,board.SDA)
@@ -33,7 +33,7 @@ df = pandas.DataFrame(columns=['time','temperature','pressure',
 
 # Define start time, delay, and total elapsed time
 start_time = time.time()
-delay_time = 10
+delay_time = 5
 record_time = 20
 
 # iteration
@@ -66,16 +66,18 @@ while time.time() - start_time < delay_time + record_time:
     # start the counter
     i += 1
     
-    if (i % itersperfile) == 0: 
-        df.to_csv(f'data_temporary_{int(i / itersperfile)}.csv', index = False)
+    if (i % itersperfile) == 0:
+        df.to_csv(f'/home/pi/RISE/data/data_temporary_{int(i / itersperfile)}.csv', index = False)
+        # for testing purposes
+        print('data saved!')
 
 # save all the data in one file, if the program ran successfully
-df.to_csv('data.csv', index = False)
+df.to_csv('/home/pi/RISE/data/data.csv', index = False)
 
 # if the program managed to run successfully, remove the temporary files
-for file_name in os.listdir('.'):
+for file_name in os.listdir('/home/pi/RISE/data'):
     if file_name.startswith('data_temporary') and file_name.endswith('.csv'):
-        os.remove(file_name)
+        os.remove(f'/home/pi/RISE/data/{file_name}')
 
 # Stop camera recording
 #cam.stop_recording()
