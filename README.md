@@ -12,6 +12,10 @@
   Currently working on writing a program and designing a model rocket on which I will launch a Raspberry Pi Zero W with an array of sensors, which I've already designed.
 </p>
 
+# Disclaimer
+
+This is by far not the easiest thing to assemble, so if you are not confident in you tweezer usage skills when ribbon cables are involved, I recommend cutting out a hole in the rocket and mounting the camera facing sideways rather than down.
+
 # To do
 
 ## Orient the STLs correctly!
@@ -28,9 +32,18 @@
 
 # Sensor payload & camera assembly
 
-Here is the end result of the brief tutorial below (ideally it would be soldered):
+Here is the end result of the brief tutorial below:
 
-![SensorPayload](/resources/SensorPayload.jpeg)
+<p align="middle">
+  <figure>
+    <img src="/resources/payload1.jpg" width="50%" />
+    <figcaption>side 1</figcaption>
+  </figure>
+  <figure>
+    <img src="/resources/payload2.jpg" width="50%" />
+    <figcaption>side 2</figcaption>
+  </figure>
+</p>
 
 ## 3D printing
 - STLs and Fusion 360 files located in the [files](/files) directory.
@@ -58,7 +71,7 @@ Also, make sure that the battery polarity matches the polarity of the PowerBoost
 
   > *magic smoke will come out*.
 
-![ShortedPowerBoost](/resources/ShortedPowerBoost.jpeg)
+![ShortedPowerBoost](/resources/shortedpowerboost.jpeg)
 
 # Some beautiful photographs
 
