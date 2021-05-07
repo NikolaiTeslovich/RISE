@@ -70,7 +70,7 @@ Also, make sure that the battery polarity matches the polarity of the PowerBoost
 
 | ![Rocket](/resources/rocket.jpeg) | ![Payload inside rocket](/resources/payloadinrocket.jpeg) |
 | --- | --- |
-|  The rocket |  Payload in the rocket  |
+|  <p align="center">The rocket</p> |  Payload in the rocket  |
 
 Last but not least, here is the external camera:
 
