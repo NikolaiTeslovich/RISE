@@ -36,6 +36,8 @@ The secure copy command connects to the pi and copies the directory at `/home/pi
 
 # To do
 
+## Make sure that the files don't delete on startup accidentally
+
 ## Orient the STLs correctly!
 
 ## Add in the simulated data in a simulated directory
@@ -58,9 +60,15 @@ The secure copy command connects to the pi and copies the directory at `/home/pi
 
 Headless means that no connections to the Pi other than power and the network are needed to use it, essentially like a server.
 
-### Install the Raspberry Pi imager
+### Install the Operting System (Pi OS Lite)
+
+Raspberry Pi Imager is an app to make installing the operating system on your SD card a breeze.
+
+Download it below:
 
 https://www.raspberrypi.org/software/
+
+Then, plug in the SD card and watch it pop off!
 
 ## Sensor payload & camera assembly
 
