@@ -52,14 +52,14 @@ while time.time() - start_time < delay_time + record_time:
     # Otherwise, append data to dataframe
     df = df.append({'time':(elapsed_time - delay_time),
                     'temperature':bmp.temperature,
-		            'pressure':bmp.pressure,
-		            'acc_x':accel.acceleration[0],
-	                'acc_y':accel.acceleration[1],
-		            'acc_z':accel.acceleration[2],
-		            'mag_x':mag.magnetic[0],
-	                'mag_y':mag.magnetic[1],
-		            'mag_z':mag.magnetic[2]},
-		            ignore_index=True)
+                    'pressure':bmp.pressure,
+                    'acc_x':accel.acceleration[0],
+                    'acc_y':accel.acceleration[1],
+                    'acc_z':accel.acceleration[2],
+                    'mag_x':mag.magnetic[0],
+                    'mag_y':mag.magnetic[1],
+                    'mag_z':mag.magnetic[2]},
+                    ignore_index=True)
     # start the counter
     i += 1
     # save a file every so often to ensure bullet-proofness depending on iterations
