@@ -16,8 +16,8 @@
 
 ## Orient the STLs correctly!
 
-## Straighten out my nose cone, it's kinda crooked for some reason
 ## Add in the simulated data in a simulated directory
+## Make the redundant dataframes actually save after every time
 
 - find appropriate camera resolution and framerate, [here's a helpful article](https://picamera.readthedocs.io/en/release-1.10/fov.html)
   - the spycam is the same as the picamera v1
