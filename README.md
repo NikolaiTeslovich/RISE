@@ -32,18 +32,18 @@ This is by far not the easiest thing to assemble, so if you are not confident in
 
 # Sensor payload & camera assembly
 
-Here is the end result of the brief tutorial below:
-
 | ![SensorPayload Side 1](/resources/payload1.jpg) | ![SensorPayload Side 2](/resources/payload2.jpg) |
 | --- | --- |
 
 ## 3D printing
+
 - STLs and Fusion 360 files located in the [files](/files) directory.
 - Spacers were printed out of TPU
 - Everything else was printed out of PLA at 215°C and 15% infill
   - Supports are only needed for the [SensorSkeleton](/files/SensorSkeleton.stl)
 
 ## Parts required
+
 Just made of what I had lying around at the time. Feel free to change the hole sizes to fit your screw sizes through the included Fusion 360 files. Fusion 360 is free.
 
 - 1x Raspberry Pi Zero W
@@ -57,6 +57,7 @@ Just made of what I had lying around at the time. Feel free to change the hole s
 - 1x printed parts (obviously)
 
 ## Things to keep in mind
+
 The screws tap into the plastic, so **do not** over-tighten them. Other than that, assembly should be pretty self-explanatory.
 
 Also, make sure that the battery polarity matches the polarity of the PowerBoost 500C JST connector. The one on the GNB 450mah 1s is reversed. Or else, this will happen.
@@ -67,13 +68,9 @@ Also, make sure that the battery polarity matches the polarity of the PowerBoost
 
 # Some beautiful photographs
 
-Here is the rocket itself:
-
-![Rocket](/resources/rocket.jpeg)
-
-Here is the payload securely packed inside the rocket:
-
-![Payload inside rocket](/resources/payloadinrocket.jpeg)
+| ![Rocket](/resources/rocket.jpeg) | ![Payload inside rocket](/resources/payloadinrocket.jpeg) |
+| --- | --- |
+|  The rocket |  Payload in the rocket  |
 
 Last but not least, here is the external camera:
 
