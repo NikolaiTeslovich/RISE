@@ -48,20 +48,30 @@ The secure copy command connects to the pi and copies the directory at `/home/pi
 - Should we truncate the data after a certain point to decrease file size? Like the hundreds or thousands place
   - Looking at the csv file, it seems that the digits repeat themselves, that there are only so many distinct messages
 
-# Sensor payload & camera assembly
+# Payload instructions
+
+*Warning: these are like a 2,000 piece LEGO kit, very detailed and lengthy, but hopefully easy to understand*
+
+## Setting up the headless Pi
+
+*And I didn't just chop off its head*
+
+Headless means that no connections to the pi other than power and the network are needed to use it, essentially like a server. 
+
+## Sensor payload & camera assembly
 
 | ![SensorPayload Side 1](/resources/payload1.jpg) | ![SensorPayload Side 2](/resources/payload2.jpg) |
 | :---: | :---: |
 |  Camera, sensor & voltage regulator  |  Raspberry Pi Zero W  |
 
-## 3D printing
+### 3D printing
 
 - STLs and Fusion 360 files located in the [files](/files) directory.
 - Spacers were printed out of TPU
 - Everything else was printed out of PLA at 215°C and 15% infill
   - Supports are only needed for the [SensorSkeleton](/files/SensorSkeleton.stl)
 
-## Parts required
+### Parts required
 
 Just made of what I had lying around at the time. Feel free to change the hole sizes to fit your screw sizes through the included Fusion 360 files. Fusion 360 is free.
 
@@ -75,7 +85,7 @@ Just made of what I had lying around at the time. Feel free to change the hole s
 - 1x small rubber band
 - 1x printed parts (obviously)
 
-## Things to keep in mind
+### Things to keep in mind
 
 The screws tap into the plastic, so **do not** over-tighten them. Other than that, assembly should be pretty self-explanatory.
 
