@@ -16,6 +16,22 @@
 
 This is by far not the easiest thing to assemble, so if you are not confident in you tweezer usage skills when ribbon cables are involved, I recommend cutting out a hole in the rocket and mounting the camera facing sideways rather than down.
 
+# Transferring files from the Pi to your computer with SCP (secure copy)
+
+The -r option is used to copy a directory, while the -p option is used to preserve file modification and access times.
+
+Here's the general syntax:
+
+```
+scp remote_username@ip:/directory /local/directory
+```
+
+So for my use case, it would look like this (ip address omitted for obvious reasons):
+
+```
+scp -r -p pi@192.xxx.xxx.xxx:/home/pi/RISE/data/ ~/Downloads
+```
+
 # To do
 
 ## Orient the STLs correctly!
