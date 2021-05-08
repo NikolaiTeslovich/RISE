@@ -12,7 +12,31 @@
   Currently working on writing a program and designing a model rocket on which I will launch a Raspberry Pi Zero W with an array of sensors, which I've already designed.
 </p>
 
+# Disclaimer
+
+This is by far not the easiest thing to assemble, so if you are not confident in you tweezer usage skills when ribbon cables are involved, I recommend cutting out a hole in the rocket and mounting the camera facing sideways rather than down.
+
+# Transferring files from the Pi to your computer with SCP
+
+The -r option is used to copy a directory, while the -p option is used to preserve file modification and access times.
+
+Here's the general syntax:
+
+```
+scp -r -p remote_username@ip:/data_directory /local/directory
+```
+
+So for my use case, it would look like this (ip address omitted for obvious reasons):
+
+```
+scp -r -p pi@192.xxx.xxx.xxx:/home/pi/RISE/data/ ~/Downloads
+```
+
+The secure copy command connects to the pi and copies the directory at `/home/pi/RISE/data/` to my computer's user Download directory `~/Downloads`.
+
 # To do
+
+## Make sure that the files don't delete on startup accidentally
 
 ## Orient the STLs correctly!
 
@@ -26,19 +50,41 @@
 - Should we truncate the data after a certain point to decrease file size? Like the hundreds or thousands place
   - Looking at the csv file, it seems that the digits repeat themselves, that there are only so many distinct messages
 
-# Sensor payload & camera assembly
+# Payload instructions
 
-Here is the end result of the brief tutorial below (ideally it would be soldered):
+*Warning: these are like a 2,000 piece LEGO kit, very detailed and lengthy, but hopefully easy to understand*
 
-![SensorPayload](/resources/SensorPayload.jpeg)
+## Making the Pi headless
 
-## 3D printing
+*And I didn't just chop off its head*
+
+Headless means that no connections to the Pi other than power and the network are needed to use it, essentially like a server.
+
+### Install the Operting System (Pi OS Lite)
+
+Raspberry Pi Imager is an app to make installing the operating system on your SD card a breeze.
+
+Download it below:
+
+https://www.raspberrypi.org/software/
+
+Then, plug in the SD card and watch it pop off!
+
+## Sensor payload & camera assembly
+
+| ![SensorPayload Side 1](/resources/payload1.jpg) | ![SensorPayload Side 2](/resources/payload2.jpg) |
+| :---: | :---: |
+|  Camera, sensor & voltage regulator  |  Raspberry Pi Zero W  |
+
+### 3D printing
+
 - STLs and Fusion 360 files located in the [files](/files) directory.
 - Spacers were printed out of TPU
 - Everything else was printed out of PLA at 215°C and 15% infill
   - Supports are only needed for the [SensorSkeleton](/files/SensorSkeleton.stl)
 
-## Parts required
+### Parts required
+
 Just made of what I had lying around at the time. Feel free to change the hole sizes to fit your screw sizes through the included Fusion 360 files. Fusion 360 is free.
 
 - 1x Raspberry Pi Zero W
@@ -51,24 +97,21 @@ Just made of what I had lying around at the time. Feel free to change the hole s
 - 1x small rubber band
 - 1x printed parts (obviously)
 
-## Things to keep in mind
+### Things to keep in mind
+
 The screws tap into the plastic, so **do not** over-tighten them. Other than that, assembly should be pretty self-explanatory.
 
 Also, make sure that the battery polarity matches the polarity of the PowerBoost 500C JST connector. The one on the GNB 450mah 1s is reversed. Or else, this will happen.
 
   > *magic smoke will come out*.
 
-![ShortedPowerBoost](/resources/ShortedPowerBoost.jpeg)
+![ShortedPowerBoost](/resources/shortedpowerboost.jpeg)
 
 # Some beautiful photographs
 
-Here is the rocket itself:
-
-![Rocket](/resources/rocket.jpeg)
-
-Here is the payload securely packed inside the rocket:
-
-![Payload inside rocket](/resources/payloadinrocket.jpeg)
+| ![Rocket](/resources/rocket.jpeg) | ![Payload inside rocket](/resources/payloadinrocket.jpeg) |
+| :---: | :---: |
+|  The rocket  |  Payload in the rocket  |
 
 Last but not least, here is the external camera:
 
