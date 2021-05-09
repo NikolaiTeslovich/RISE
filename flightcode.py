@@ -64,8 +64,11 @@ while time.time() - start_time < delay_time + record_time:
     i += 1
     # save a file every so often to ensure bullet-proofness depending on iterations
     if (i % iters) == 0:
+        fo = open(f'/home/pi/RISE/data/data_temporary_{int(i / iters)}.csv')
         df.to_csv(f'/home/pi/RISE/data/data_temporary_{int(i / iters)}.csv', index = False)
         # FOR TESTING
+        fo.close()
+
         print('data saved!')
 
 # save all the data in one file, if the program ran successfully
