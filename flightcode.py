@@ -114,5 +114,3 @@ df_merged = pd.concat(df_from_each_file, axis=0, ignore_index=True)
 df_merged.to_csv(data_dir + '/' + 'merged.csv')
 
 print('done')
-=======
->>>>>>> e81c2f96b7203f8247596ce9f67cbc6bef7d5546
