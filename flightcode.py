@@ -1,4 +1,5 @@
 import os
+import glob
 import numpy as np
 import board
 import busio
@@ -7,6 +8,7 @@ import adafruit_lsm303_accel
 import adafruit_lsm303dlh_mag
 import time
 import picamera
+import pandas as pd
 
 # Setup a directory to save the data in
 
@@ -49,7 +51,9 @@ record_time = 300
 # iterating parameters
 
 i = 0
-iters = 500
+
+## find a good interval for this value
+iters = 200
 
 elapsed_time = time.time() - start_time
 
@@ -58,6 +62,13 @@ elapsed_time = time.time() - start_time
 datas = np.array([[(elapsed_time - delay_time), bmp.temperature, bmp.pressure,
                  accel.acceleration[0], accel.acceleration[1], accel.acceleration[2],
                  mag.magnetic[0], mag.magnetic[1], mag.magnetic[2]]])
+
+# Define the function to save a temporary file
+def saveTempFile():
+    # the formatting (the '{:03}') allows for up to 999 temp files
+    file = open(data_dir + '/data' + '{:03}'.format(int(i / iters)) + '.csv', "w")
+    np.savetxt(data_dir + '/data' + '{:03}'.format(int(i / iters)) + '.csv', datas, delimiter=",")
+    file.close()
 
 while time.time() - start_time < delay_time + record_time:
     # Update elapsed time with every run
@@ -77,9 +88,7 @@ while time.time() - start_time < delay_time + record_time:
     if ((i + 1) % iters) == 0:
         #TESTING
         test_time = time.time()
-        file = open(data_dir + '/' + f'data{int(i / iters)}.csv', "w")
-        np.savetxt(data_dir + '/' + f'data{int(i / iters)}.csv', datas, delimiter=",")
-        file.close()
+        saveTempFile()
         #wipe the array to keep the same save time
         datas = np.array([[]])
         datas = np.array([[(elapsed_time - delay_time), bmp.temperature, bmp.pressure,
@@ -89,11 +98,18 @@ while time.time() - start_time < delay_time + record_time:
         print("--- %s seconds to save data ---" % (time.time() - test_time))
 
 #save the last bit of data after the final loop
-file = open(data_dir + '/' + f'data{int((i / iters) + 1)}.csv', "w")
-np.savetxt(data_dir + '/' + f'data{int((i / iters) + 1)}.csv', datas, delimiter=",")
-file.close()
+saveTempFile()
 
 # Stop the camera recording
 #cam.stop_recording()
+
+# make a massive, beautiful csv file at the end with all of the data
+all_files = sorted(glob.glob(data_dir + '/' + '*.csv'))
+df_from_each_file = (pd.read_csv(f, sep=',', header=None,
+                                 names=['time','temperature','pressure',
+                                        'acc_x','acc_y','acc_z',
+                                        'mag_x','mag_y','mag_z']) for f in all_files)
+df_merged = pd.concat(df_from_each_file, axis=0, ignore_index=True)
+df_merged.to_csv(data_dir + '/' + 'merged.csv')
 
 print('done sir')
