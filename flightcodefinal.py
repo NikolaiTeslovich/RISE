@@ -35,13 +35,13 @@ mag = adafruit_lsm303dlh_mag.LSM303DLH_Mag(i2c)
 # Define the time parameters
 
 start_time = time.time()
-delay_time = 1
-record_time = 60
+delay_time = 10
+record_time = 300
 
 # iterating parameters
 
 i = 0
-iters = 100
+iters = 500
 
 elapsed_time = time.time() - start_time
 
