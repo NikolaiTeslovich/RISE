@@ -32,6 +32,14 @@ bmp = adafruit_bmp3xx.BMP3XX_I2C(i2c)
 accel = adafruit_lsm303_accel.LSM303_Accel(i2c)
 mag = adafruit_lsm303dlh_mag.LSM303DLH_Mag(i2c)
 
+# Set up camera stuff
+### MAYBE ALSO ITERATE THE CAMERA RECORDINGS ###
+### Format the recordings somehow ###
+# cam = picamera.PiCamera() #intialize camera
+# cam.resolution = (640, 480)
+# camera.framerate = 90
+# cam.start_recording(data_dir + '/' + 'video.h264') #start recording and name video file
+
 # Define the time parameters
 
 start_time = time.time()
@@ -85,5 +93,7 @@ file = open(data_dir + '/' + f'data{int((i / iters) + 1)}.csv', "w")
 np.savetxt(data_dir + '/' + f'data{int((i / iters) + 1)}.csv', datas, delimiter=",")
 file.close()
 
+# Stop the camera recording
+#cam.stop_recording()
 
 print('done sir')
