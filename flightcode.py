@@ -46,7 +46,7 @@ mag = adafruit_lsm303dlh_mag.LSM303DLH_Mag(i2c)
 
 start_time = time.time()
 delay_time = 10
-record_time = 300
+record_time = 30
 
 # iterating parameters
 
@@ -55,13 +55,7 @@ i = 0
 ## find a good interval for this value
 iters = 200
 
-elapsed_time = time.time() - start_time
-
 # Define the array with all of the data
-
-datas = np.array([[(elapsed_time - delay_time), bmp.temperature, bmp.pressure,
-                 accel.acceleration[0], accel.acceleration[1], accel.acceleration[2],
-                 mag.magnetic[0], mag.magnetic[1], mag.magnetic[2]]])
 
 # Define the function to save a temporary file
 def saveTempFile():
@@ -69,6 +63,9 @@ def saveTempFile():
     file = open(data_dir + '/data' + '{:03}'.format(int(i / iters)) + '.csv', "w")
     np.savetxt(data_dir + '/data' + '{:03}'.format(int(i / iters)) + '.csv', datas, delimiter=",")
     file.close()
+
+#Define one row of the array
+datas = np.array([[0, 0, 0, 0, 0, 0, 0, 0, 0]])
 
 while time.time() - start_time < delay_time + record_time:
     # Update elapsed time with every run
@@ -110,6 +107,8 @@ df_from_each_file = (pd.read_csv(f, sep=',', header=None,
                                         'acc_x','acc_y','acc_z',
                                         'mag_x','mag_y','mag_z']) for f in all_files)
 df_merged = pd.concat(df_from_each_file, axis=0, ignore_index=True)
+# remove a row from the first line
+df_merged = df_merged.iloc[1: , :]
 df_merged.to_csv(data_dir + '/' + 'merged.csv')
 
 print('done')
