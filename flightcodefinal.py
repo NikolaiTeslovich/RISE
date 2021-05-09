@@ -86,4 +86,4 @@ np.savetxt(data_dir + '/' + f'data{int((i / iters) + 1)}.csv', datas, delimiter=
 file.close()
 
 
-print(done sir)
+print('done sir')
