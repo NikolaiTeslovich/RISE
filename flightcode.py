@@ -18,7 +18,7 @@ names = np.array([0])
 
 for name in main_dir:
     if name.startswith('data'):
-        name = np.array([name[-1]]).astype(np.int)
+        name = np.array([name[4:]]).astype(np.int)
         names = np.append(names, name, axis=0).astype(np.int)
 
 data_dir = f'/home/pi/RISE/data{np.max(names) + 1}'
@@ -112,4 +112,4 @@ df_from_each_file = (pd.read_csv(f, sep=',', header=None,
 df_merged = pd.concat(df_from_each_file, axis=0, ignore_index=True)
 df_merged.to_csv(data_dir + '/' + 'merged.csv')
 
-print('done sir')
+print('done')
