@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  A payload the collects data and video throughout the flight of a model rocket.
+  A payload that collects data and video throughout the flight of a model rocket.
 </p>
 
 # To do
