@@ -42,11 +42,11 @@ The secure copy command connects to the pi and copies the directory at `/home/pi
 
 # Payload instructions
 
-*Warning: these are like a 2,000 piece LEGO kit, very detailed and lengthy, but hopefully easy to understand*
+*Warning: these are like a 2,000 piece LEGO kit, very detailed and lengthy, but hopefully easy to understand.*
 
 ## Making the Pi headless
 
-*And I didn't just chop off its head*
+*And I didn't just chop off its head.*
 
 Headless means that no connections to the Pi other than power and the network are needed to use it, essentially like a server.
 
@@ -93,7 +93,7 @@ Save the changes to the file, and eject the SD from your computer. The Pi is rea
 
 ###  Connecting to the Pi over ssh
 
-After waiting for a couple minutes (the first boot takes quite a bit of time), connect to the Pi with this command, substituting the ipaddress with the ip of the Pi, which you can get through your router:
+After waiting for a couple minutes (the first boot takes quite a bit of time), connect to the Pi with this command, substituting the `ipaddress` with the ip of the Pi, which you can get through your router:
 
 ```
 ssh pi@ipaddress
