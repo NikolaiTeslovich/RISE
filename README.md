@@ -9,14 +9,29 @@
 </p>
 
 <p align="center">
-  Currently working on writing a program and designing a model rocket on which I will launch a Raspberry Pi Zero W with an array of sensors, which I've already designed.
+  A payload the collects data and video throughout the flight of a model rocket.
 </p>
 
-# Disclaimer
+# To do
 
-This is by far not the easiest thing to assemble, so if you are not confident in you tweezer usage skills when ribbon cables are involved, I recommend cutting out a hole in the rocket and mounting the camera facing sideways rather than down.
+- find appropriate camera resolution and framerate, [here's a helpful article](https://picamera.readthedocs.io/en/release-1.10/fov.html)
+  - the spycam is the same as the picamera v1
+- make script start on startup
 
-# Transferring files from the Pi to your computer with SCP
+# Breakdown of the code
+
+1. First it imports the packages, sets up the sensors over I2C, and starts recording video.
+2. Creates a new directory to put the data and video into, to prevent overwriting any data.
+  - If no data directories exist, create the `data1` directory.
+  - If the `data1` directory already exists, create the `data2` directory, etc.
+3. Wait until the `delay_time` is over to collect data from the sensors as fast as possible using a [NumPy](https://numpy.org/) array over the `record_time` interval.
+  - This comes out to about 40 measurements/sec compared to ~10 measurements/sec if I had used [pandas](https://pandas.pydata.org/) dataframes.
+4. Every so many rows defined by the `iters` variable, dump the data into a csv and wipe the array.
+  - This is done for bullet-proofness, so that if the payload breaks, data up to that point is saved.
+5. When the `record_time` is over, the last of data is saved into a csv, and the camera stops recording.
+6. All of the temporary csv files are merged into one `merged.csv` through the use of a dataframe (I found pandas the easiest way to do this).
+
+# Transferring the data from the Pi to your computer with scp
 
 The -r option is used to copy a directory, while the -p option is used to preserve file modification and access times.
 
@@ -34,13 +49,11 @@ scp -r -p pi@192.xxx.xxx.xxx:/home/pi/RISE/data1/ ~/Downloads
 
 The secure copy command connects to the pi and copies the directory at `/home/pi/RISE/data1/` to my computer's user Download directory `~/Downloads`.
 
-# To do
-
-- find appropriate camera resolution and framerate, [here's a helpful article](https://picamera.readthedocs.io/en/release-1.10/fov.html)
-  - the spycam is the same as the picamera v1
-- make script start on startup
-
 # Payload instructions
+
+## Disclaimer
+
+This is by far not the easiest thing to assemble, so if you are not confident in you tweezer usage skills when ribbon cables are involved, I recommend cutting out a hole in the rocket and mounting the camera facing sideways rather than down.
 
 ## Making the Pi headless
 
