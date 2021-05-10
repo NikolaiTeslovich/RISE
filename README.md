@@ -29,23 +29,16 @@ scp -r -p remote_username@ip:/data_directory /local/directory
 So for my use case, it would look like this (ip address omitted for obvious reasons):
 
 ```
-scp -r -p pi@192.xxx.xxx.xxx:/home/pi/RISE/data/ ~/Downloads
+scp -r -p pi@192.xxx.xxx.xxx:/home/pi/RISE/data1/ ~/Downloads
 ```
 
-The secure copy command connects to the pi and copies the directory at `/home/pi/RISE/data/` to my computer's user Download directory `~/Downloads`.
+The secure copy command connects to the pi and copies the directory at `/home/pi/RISE/data1/` to my computer's user Download directory `~/Downloads`.
 
 # To do
-
-## Orient the STLs correctly!
-
-## Add in the simulated data in a simulated directory
 
 - find appropriate camera resolution and framerate, [here's a helpful article](https://picamera.readthedocs.io/en/release-1.10/fov.html)
   - the spycam is the same as the picamera v1
 - make script start on startup
-- stop collecting data on landing, when the pressure data is no longer changing
-- Should we truncate the data after a certain point to decrease file size? Like the hundreds or thousands place
-  - Looking at the csv file, it seems that the digits repeat themselves, that there are only so many distinct messages
 
 # Payload instructions
 
@@ -57,7 +50,7 @@ The secure copy command connects to the pi and copies the directory at `/home/pi
 
 Headless means that no connections to the Pi other than power and the network are needed to use it, essentially like a server.
 
-### Install the Operting System (Pi OS Lite)
+### Install the Operating System (Pi OS Lite)
 
 Raspberry Pi Imager is an app to make installing the operating system on your SD card a breeze.
 
@@ -65,7 +58,40 @@ Download it below:
 
 https://www.raspberrypi.org/software/
 
-Then, plug in the SD card and watch it pop off!
+Then, plug in the SD card and flash it with **Raspberry Pi OS Lite**.
+
+### Making the Pi work headlessly
+
+In a terminal window, run:
+
+```
+touch /Volumes/boot/ssh
+```
+
+This will make a file on the SD card called `ssh`, which will enable ssh on the Pi.
+
+Next, let's add some wifi information by creating another file on the SD card:
+
+```
+touch /Volumes/boot/wpa_supplicant.conf
+```
+
+Open the file with a text editing utility like TextEdit or nano, and paste in the following, substituting `NETWORK-NAME` with your wifi name and `NETWORK-PASSWORD` with the wifi password:
+
+```
+country=US
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+    ssid="NETWORK-NAME"
+    psk="NETWORK-PASSWORD"
+}
+```
+
+Save the changes to the file, and eject the SD from your computer. The Pi is ready for its first boot.
+
+###
 
 ## Sensor payload & camera assembly
 
