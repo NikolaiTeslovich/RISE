@@ -91,7 +91,23 @@ network={
 
 Save the changes to the file, and eject the SD from your computer. The Pi is ready for its first boot.
 
-###
+###  Connecting to the Pi over ssh
+
+After waiting for a couple minutes (the first boot takes quite a bit of time), connect to the Pi with this command, substituting the ipaddress with the ip of the Pi, which you can get through your router:
+
+```
+ssh pi@ipaddress
+```
+
+The password for the pi user is `raspberry`
+
+Then, update the Pi:
+
+```
+sudo apt update && sudo apt upgrade -y
+```
+
+To exit the ssh session just type `exit`.
 
 ## Sensor payload & camera assembly
 
