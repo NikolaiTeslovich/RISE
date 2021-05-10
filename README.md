@@ -50,6 +50,12 @@ scp -r -p pi@192.xxx.xxx.xxx:/home/pi/RISE/data1/ ~/Downloads
 
 The secure copy command connects to the pi and copies the directory at `/home/pi/RISE/data1/` to my computer's user Download directory `~/Downloads`.
 
+**Note**. If your data gets corrupted for some reason, for example due to a random powerout, run this command in the repo:
+
+```
+find .git/objects/ -size 0 -exec rm -f {} \; && git fetch origin
+```
+
 # Payload instructions
 
 ## Disclaimer
