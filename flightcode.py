@@ -12,7 +12,7 @@ import pandas as pd
 
 # Important parameters that can be altered
 delay_time = 10
-record_time = 30
+record_time = 60
 # How many rows are data are in each temporary file
 iters = 200
 
