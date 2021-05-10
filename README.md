@@ -24,10 +24,11 @@
 2. Creates a new directory to put the data and video into, to prevent overwriting any data.
     - If no data directories exist, create the `data1` directory.
     - If the `data1` directory already exists, create the `data2` directory, etc.
-3. Wait until the `delay_time` is over to collect data from the sensors as fast as possible using a [NumPy](https://numpy.org/) array over the `record_time` interval.
+3. Waits until the `delay_time` is over to collect data from the sensors as fast as possible using a [NumPy](https://numpy.org/) array over the `record_time` interval.
     - This comes out to about 40 measurements/sec compared to ~10 measurements/sec if I had used [pandas](https://pandas.pydata.org/) dataframes.
 4. Every so many rows defined by the `iters` variable, dump the data into a csv and wipe the array.
     - This is done for bullet-proofness, so that if the payload breaks, data up to that point is saved.
+    - The save time is only about ~0.1s.
 5. When the `record_time` is over, the last of data is saved into a csv, and the camera stops recording.
 6. All of the temporary csv files are merged into one `merged.csv` through the use of a dataframe (I found pandas the easiest way to do this).
 
