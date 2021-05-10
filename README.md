@@ -42,8 +42,6 @@ The secure copy command connects to the pi and copies the directory at `/home/pi
 
 # Payload instructions
 
-*Warning: these are like a 2,000 piece LEGO kit, very detailed and lengthy, but hopefully easy to understand.*
-
 ## Making the Pi headless
 
 *And I didn't just chop off its head.*
