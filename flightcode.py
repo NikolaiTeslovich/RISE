@@ -22,14 +22,6 @@ bmp = adafruit_bmp3xx.BMP3XX_I2C(i2c)
 accel = adafruit_lsm303_accel.LSM303_Accel(i2c)
 mag = adafruit_lsm303dlh_mag.LSM303DLH_Mag(i2c)
 
-# Set up camera stuff
-### MAYBE ALSO ITERATE THE CAMERA RECORDINGS ###
-### Format the recordings somehow ###
-# cam = picamera.PiCamera() #intialize camera
-# cam.resolution = (640, 480)
-# cam.framerate = 90
-# cam.start_recording(data_dir + '/' + 'video.h264') #start recording and name video file
-
 # Make the directory data2 if data1 exists, or data1 if no data directories exist
 main_dir = os.listdir('/home/pi/RISE')
 names = np.array([0])
@@ -40,6 +32,14 @@ for name in main_dir:
 data_dir = f'/home/pi/RISE/data{np.max(names) + 1}'
 os.mkdir(data_dir)
 print('made directory at ' + data_dir)
+
+# Set up camera stuff
+### MAYBE ALSO ITERATE THE CAMERA RECORDINGS ###
+### Format the recordings somehow ###
+# cam = picamera.PiCamera() #intialize camera
+# cam.resolution = (640, 480)
+# cam.framerate = 90
+# cam.start_recording(data_dir + '/' + 'video.h264') #start recording and name video file
 
 # Define the time parameters
 start_time = time.time()
