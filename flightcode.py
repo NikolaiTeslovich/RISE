@@ -27,7 +27,7 @@ mag = adafruit_lsm303dlh_mag.LSM303DLH_Mag(i2c)
 ### Format the recordings somehow ###
 # cam = picamera.PiCamera() #intialize camera
 # cam.resolution = (640, 480)
-# camera.framerate = 90
+# cam.framerate = 90
 # cam.start_recording(data_dir + '/' + 'video.h264') #start recording and name video file
 
 # Make the directory data2 if data1 exists, or data1 if no data directories exist
