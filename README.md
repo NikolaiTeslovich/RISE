@@ -109,7 +109,7 @@ sudo apt update && sudo apt upgrade -y
 
 To exit the ssh session just type `exit`.
 
-### Making the script run on startup
+### Making the code run on startup
 
 Create a cron job, and selected the `[1]` option to edit it in nano:
 
