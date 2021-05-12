@@ -32,25 +32,7 @@
 5. When the `record_time` is over, the last of data is saved into a csv, and the camera stops recording.
 6. All of the temporary csv files are merged into one `merged.csv` through the use of a dataframe (I found pandas the easiest way to do this).
 
-# Transferring the data from the Pi to your computer with scp
-
-The -r option is used to copy a directory, while the -p option is used to preserve file modification and access times.
-
-Here's the general syntax:
-
-```
-scp -r -p remote_username@ip:/data_directory /local/directory
-```
-
-So for my use case, it would look like this (ip address omitted for obvious reasons):
-
-```
-scp -r -p pi@192.xxx.xxx.xxx:/home/pi/RISE/data1/ ~/Downloads
-```
-
-The secure copy command connects to the pi and copies the directory at `/home/pi/RISE/data1/` to my computer's user Download directory `~/Downloads`.
-
-**Note**. If your data gets corrupted for some reason, for example due to a random powerout, run this command in the repo:
+**Note**. If your data gets corrupted for some reason, for example due to a random power out, run this command in the repo directory:
 
 ```
 find .git/objects/ -size 0 -exec rm -f {} \; && git fetch origin
@@ -126,6 +108,44 @@ sudo apt update && sudo apt upgrade -y
 ```
 
 To exit the ssh session just type `exit`.
+
+### Making the script run on startup
+
+Create a cron job, and selected the `[1]` option to edit it in nano:
+
+```
+crontab -e
+```
+
+At the very bottom, add the following to run the script on startup:
+
+```
+@reboot python3 /home/pi/RISE/flightcode.py &
+```
+
+*Important*: be sure to leave a line below the text, or else it might not work.
+
+Exit out of nano by pressing ctrl-X followed by Y to save the changes.
+
+Now, with a reboot the script should work.
+
+### Transferring the data from the Pi to your computer with scp
+
+The -r option is used to copy a directory, while the -p option is used to preserve file modification and access times.
+
+Here's the general syntax:
+
+```
+scp -r -p remote_username@ip:/data_directory /local/directory
+```
+
+So for my use case, it would look like this (ip address omitted for obvious reasons):
+
+```
+scp -r -p pi@192.xxx.xxx.xxx:/home/pi/RISE/data1/ ~/Downloads
+```
+
+The secure copy command connects to the pi and copies the directory at `/home/pi/RISE/data1/` to my computer's user Download directory `~/Downloads`.
 
 ## Sensor payload & camera assembly
 
