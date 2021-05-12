@@ -3,6 +3,10 @@
 </h1>
 
 <p align="center">
+  <img src="/resources/RISE.png" width="150" height="150">
+</p>
+
+<p align="center">
   <a href="https://github.com/NikolaiTeslovich/RISE/blob/main/LICENSE">
     <img alt="MIT license" src="https://img.shields.io/github/license/NikolaiTeslovich/RISE">
   </a>
