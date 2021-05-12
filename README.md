@@ -66,6 +66,8 @@ Then, plug in the SD card and flash it with **Raspberry Pi OS Lite**.
 
 ### Making the Pi work headlessly
 
+Remove, then plug back in the SD card.
+
 In a terminal window, run:
 
 ```
@@ -103,7 +105,7 @@ After waiting for a couple minutes (the first boot takes quite a bit of time), c
 ssh pi@ipaddress
 ```
 
-The password for the pi user is `raspberry`
+The password for the pi user is `raspberry`.
 
 Then, update the Pi:
 
