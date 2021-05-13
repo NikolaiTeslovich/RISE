@@ -148,7 +148,7 @@ scp -r -p remote_username@ip:/data_directory /local/directory
 So for my use case, it would look like this (ip address omitted for obvious reasons):
 
 ```
-scp -r -p pi@192.xxx.xxx.xxx:/home/pi/RISE/data1/ ~/Downloads
+scp -r -p pi@192.xxx.xxx.xxx:/home/pi/RISE/data1 ~/Downloads
 ```
 
 The secure copy command connects to the pi and copies the directory at `/home/pi/RISE/data1/` to my computer's user Download directory `~/Downloads`.
