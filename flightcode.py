@@ -36,10 +36,10 @@ print('made directory at ' + data_dir)
 # Set up camera stuff
 ### MAYBE ALSO ITERATE THE CAMERA RECORDINGS ###
 ### Format the recordings somehow ###
-# cam = picamera.PiCamera() #intialize camera
-# cam.resolution = (640, 480)
-# cam.framerate = 90
-# cam.start_recording(data_dir + '/' + 'video.h264') #start recording and name video file
+cam = picamera.PiCamera() #intialize camera
+cam.resolution = (640, 480)
+cam.framerate = 90
+cam.start_recording(data_dir + '/' + 'video.h264') #start recording and name video file
 
 # Define the time parameters
 start_time = time.time()
@@ -83,7 +83,7 @@ while time.time() - start_time < delay_time + record_time:
 saveTempFile()
 
 # Stop the camera recording
-#cam.stop_recording()
+cam.stop_recording()
 
 # Make a massive, beautiful csv file at the end with all of the data
 all_files = sorted(glob.glob(data_dir + '/' + '*.csv'))
