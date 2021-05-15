@@ -100,7 +100,7 @@ df_merged = pd.concat(df_from_each_file, axis=0, ignore_index=True)
   #df_merged = df_merged.iloc[n:, :]
 
 # Remove the first row, since the data is off for some reason
-df_merged = df_merged.iloc[1: , :]
+# df_merged = df_merged.iloc[1: , :]
 # Write all of the data to to merged.csv
 df_merged.to_csv(data_dir + '/' + 'merged.csv')
 # Print done
