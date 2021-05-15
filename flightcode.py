@@ -38,7 +38,7 @@ print('made directory at ' + data_dir)
 ### Format the recordings somehow ###
 cam = picamera.PiCamera() #intialize camera
 cam.resolution = (640, 480)
-cam.framerate = 90
+cam.framerate = 60
 cam.start_recording(data_dir + '/' + 'video.h264') #start recording and name video file
 
 # Define the time parameters
@@ -92,6 +92,13 @@ df_from_each_file = (pd.read_csv(f, sep=',', header=None,
                                         'acc_x','acc_y','acc_z',
                                         'mag_x','mag_y','mag_z']) for f in all_files)
 df_merged = pd.concat(df_from_each_file, axis=0, ignore_index=True)
+
+# a potential fix to a bug
+#x = range(0, len(df_merged), 200)
+
+#for n in x:
+  #df_merged = df_merged.iloc[n:, :]
+
 # Remove the first row, since the data is off for some reason
 df_merged = df_merged.iloc[1: , :]
 # Write all of the data to to merged.csv

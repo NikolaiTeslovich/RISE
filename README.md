@@ -21,7 +21,8 @@
 - find appropriate camera resolution and framerate, [here's a helpful article](https://picamera.readthedocs.io/en/release-1.10/fov.html)
   - the spycam is the same as the picamera v1
   - does this affect the rate of data collection?
-- Error encountered involving duplicate values with the data collections
+- Error encountered involving duplicate values with the data collections for the index
+  - Meaning that 200 and 201 have the same time value, and are duplicates
 
 # Breakdown of the code
 
